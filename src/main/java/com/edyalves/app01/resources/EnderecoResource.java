@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edyalves.app01.domain.Usuario;
-import com.edyalves.app01.services.UsuarioService;
+import com.edyalves.app01.domain.Endereco;
+import com.edyalves.app01.services.EnderecoService;
 
 @RestController
-@RequestMapping(value = "/usuarios")
-public class UsuarioResource {
+@RequestMapping(value="/enderecos")
+public class EnderecoResource {
 	
 	@Autowired
-	private UsuarioService service;
+	private EnderecoService service;
 	
 	@RequestMapping(value ="/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Usuario> find(@PathVariable Integer id) {
-		Usuario obj = service.find(id);
+	public ResponseEntity<Endereco> find(@PathVariable Integer id){
+		Endereco obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
 

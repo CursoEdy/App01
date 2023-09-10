@@ -23,8 +23,8 @@ public class App01Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Usuario user1 = new Usuario(null, "Usuer 01", "user-01@email.com");
-		Usuario user2 = new Usuario(null, "Usuer 02", "user-02@email.com");
+		Usuario user1 = new Usuario(null, "User 01", "user-01@email.com");
+		Usuario user2 = new Usuario(null, "User 02", "user-02@email.com");
 		
 		usuarioRepository.saveAll(Arrays.asList(user1, user2));
 	}
